@@ -16,6 +16,13 @@ class UserValidator(Validator):
         self.assert_in("identifications", "Passport")
 
 class TestValidator(unittest.TestCase):
+    def test_undefined_attribute(self):
+        attrs = { "last_name": "Staley" }
+
+        validator = UserValidator(**attrs)
+
+        self.assertIsNone(validator.first_name)
+
     def test_presence(self):
         attrs = { "last_name": "Staley" }
 

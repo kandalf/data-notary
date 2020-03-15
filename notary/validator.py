@@ -1,4 +1,4 @@
-class Validator:
+class Validator(object):
     def __init__(self, attrs={}, **kwargs):
         self.errors = {}
 
@@ -8,6 +8,12 @@ class Validator:
 
         for attr in kwargs:
             setattr(self, attr, kwargs[attr])
+
+    def __getattr__(self, name):
+        def _missing(*args, **kwargs):
+            return None
+
+        return _missing()
 
     def validate(self):
         raise Exception("You must implement the validate() function in a subclass")
