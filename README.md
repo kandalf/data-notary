@@ -2,13 +2,15 @@
 
 Or simply _notary_ is a simple data validation for Python objects. "Inspired on" (actually stolen from) [Scrivener](https://github.com/soveran/scrivener) for Ruby.
 
-You need to subclass `notary.validator.Validator` and override the `validate` instance method.
-
 ## Install
 
 ```
 pip install data-notary
 ```
+
+## Usage
+
+You need to subclass `notary.validator.Validator` and override the `validate` instance method.
 
 For example, a class to validate user data could be like:
 
