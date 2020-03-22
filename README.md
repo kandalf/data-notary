@@ -4,6 +4,12 @@ Or simply _notary_ is a simple data validation for Python objects. "Inspired on"
 
 You need to subclass `notary.validator.Validator` and override the `validate` instance method.
 
+## Install
+
+```
+pip install data-notary
+```
+
 For example, a class to validate user data could be like:
 
 ```Python
