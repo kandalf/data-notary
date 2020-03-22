@@ -109,7 +109,8 @@ Using the same example, this would produce the following output
 
 ```
 Error!
-{'last_name': ['Last name must be shorter than 5 characters'], 'middle_name': ["Sorry, mate, I don't like middle names"], 'phone_numbers': ['not_valid'], 'identifications': ['Passport_not_in_list']}```
+{'last_name': ['Last name must be shorter than 5 characters'], 'middle_name': ["Sorry, mate, I don't like middle names"], 'phone_numbers': ['not_valid'], 'identifications': ['Passport_not_in_list']
+```
 
 And last but not least, you can have more than one validation per attribute, modifying a bit the example above, we could have the following:
 
