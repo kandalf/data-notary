@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = "data-notary",
-    version = "0.2.0",
+    version = "0.3.0",
     description = "Simple data validators for Python",
     long_description = "README",
     long_description_content_type = "text/markdown",
