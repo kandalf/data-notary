@@ -17,14 +17,16 @@ class UserValidator(Validator):
 
 class TestValidator(unittest.TestCase):
     def test_undefined_attribute(self):
-        attrs = { "last_name": "Staley" }
+        attrs = { "last_name": "Staley",
+                  "identifications": ["Driver's License", "Government ID"] }
 
         validator = UserValidator(**attrs)
 
         self.assertIsNone(validator.first_name)
 
     def test_presence(self):
-        attrs = { "last_name": "Staley" }
+        attrs = { "last_name": "Staley",
+                  "identifications": ["Driver's License", "Government ID"] }
 
         validator = UserValidator(**attrs)
 

@@ -59,9 +59,15 @@ class Validator(object):
 
         return True
 
-    def assert_in(self, lst, val, message = "{}_not_in_list"):
+    def assert_in(self, attr, val, message = "{}_not_in_list"):
+        lst = getattr(self, attr)
+
+        if type(lst) is not list:
+            self._add_error(lst, "not_valid")
+            return
+
         if not val in lst:
-            self._add_error(lst, message.format(val))
+            self._add_error(attr, message.format(val))
 
     def _add_error(self, attr, error):
         if self.errors.get(attr) is None:
