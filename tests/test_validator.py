@@ -79,7 +79,7 @@ class TestValidator(unittest.TestCase):
         validator = UserValidator(**attrs)
 
         self.assertFalse(validator.is_valid())
-        self.assertEqual(validator.errors["identifications"], ["Passport_not_in_list"])
+        self.assertEqual(validator.errors["identifications"], ["not_valid"])
 
 if __name__ == '__main__':
     unittest.main()
